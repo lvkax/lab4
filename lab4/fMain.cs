@@ -14,7 +14,7 @@ namespace lab4
 
         private void fMain_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
