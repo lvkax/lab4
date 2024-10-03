@@ -52,7 +52,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnAdd, btnEdit, tsSeparator1, btnClear, btnDelete, tsSeparator2, btnExit });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(836, 27);
+            toolStrip1.Size = new Size(837, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -62,8 +62,9 @@
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
             btnAdd.ImageTransparentColor = Color.Magenta;
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(29, 24);
+            btnAdd.Size = new Size(24, 24);
             btnAdd.Text = "Додати запис про телефон";
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnEdit
             // 
@@ -71,8 +72,9 @@
             btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
             btnEdit.ImageTransparentColor = Color.Magenta;
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(29, 24);
+            btnEdit.Size = new Size(24, 24);
             btnEdit.Text = "Редагувати запис";
+            btnEdit.Click += btnEdit_Click;
             // 
             // tsSeparator1
             // 
@@ -85,9 +87,9 @@
             btnClear.Image = (Image)resources.GetObject("btnClear.Image");
             btnClear.ImageTransparentColor = Color.Magenta;
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(29, 24);
+            btnClear.Size = new Size(24, 24);
             btnClear.Text = "Очистити дані";
-            btnClear.Click += toolStripButton3_Click;
+            btnClear.Click += btnClear_Click;
             // 
             // btnDelete
             // 
@@ -95,8 +97,9 @@
             btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
             btnDelete.ImageTransparentColor = Color.Magenta;
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(29, 24);
+            btnDelete.Size = new Size(24, 24);
             btnDelete.Text = "Видалити запис";
+            btnDelete.Click += btnDelete_Click;
             // 
             // tsSeparator2
             // 
@@ -109,8 +112,9 @@
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageTransparentColor = Color.Magenta;
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(29, 24);
+            btnExit.Size = new Size(24, 24);
             btnExit.Text = "Вийти з програми ";
+            btnExit.Click += btnExit_Click;
             // 
             // bindScrPhones
             // 
@@ -125,20 +129,22 @@
             gvPhones.DataSource = bindScrPhones;
             gvPhones.Dock = DockStyle.Fill;
             gvPhones.Location = new Point(0, 27);
+            gvPhones.Margin = new Padding(3, 2, 3, 2);
             gvPhones.Name = "gvPhones";
             gvPhones.ReadOnly = true;
             gvPhones.RowHeadersWidth = 51;
             gvPhones.RowTemplate.Height = 29;
-            gvPhones.Size = new Size(836, 423);
+            gvPhones.Size = new Size(837, 357);
             gvPhones.TabIndex = 1;
             // 
             // fMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(836, 450);
+            ClientSize = new Size(837, 384);
             Controls.Add(gvPhones);
             Controls.Add(toolStrip1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "fMain";
             Text = "Лабораторна робота №4";
             Load += fMain_Load;

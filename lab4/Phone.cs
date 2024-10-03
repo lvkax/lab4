@@ -16,7 +16,7 @@ namespace lab4
 
         public string ReleaseYear { get; set; }
 
-        public int YearOfPurchase { get; set; }
+        public string YearOfPurchase { get; set; }
 
         public string BatteryCapacity { get; set; }
 
@@ -24,20 +24,11 @@ namespace lab4
 
         public bool HasWirelessCharging { get; set; }
 
-        public double GetGuaranteeEndingYear()
-        {
-            if (Name == "iPhone") return YearOfPurchase + 1;
-            else if (Name == "Samsung") return YearOfPurchase + 2;
-            else return YearOfPurchase + 3;
-        }
-/*
-        public double GuaranteeEndingYear
-        {
-            get { return GetGuaranteeEndingYear(); }
-            set;
-        }
-*/
-        public Phone(string name, string model, string cost, string releaseyear, int yearofpurchase,
+        public Phone()
+        { }
+        
+     
+        public Phone(string name, string model, string cost, string releaseyear, string yearofpurchase,
             string batterycapacity, bool has3cameras, bool haswirelesscharging) 
         {
             Name = name; Model = model; Cost = cost; ReleaseYear = releaseyear;
